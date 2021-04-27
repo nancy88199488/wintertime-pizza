@@ -1,0 +1,18 @@
+.container {
+    background-image: url(../images/boardImage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: azure;
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    }
+    
+    
+    
+    
