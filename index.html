@@ -18,83 +18,91 @@
     <div class="container">
         <h1>Wintertime Pizza</h1>
         <p>At Wintertime you will get the best pizzas.<br><br>Welcome and enjoy <br><br>Get yours now!!!</p>
-        <form id="type">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="images/pizza1.jpg" width="100px" height="100px" alt="">
-                </div>
-                <br><br>
-                <label>
-                    <h3>Pizzas</h3>
-                </label>
-                <select name="size" id="size">
-                    <option value="small">Small @ Ksh. 200</option>
-                    <option value="medium">Medium @ Ksh. 400</option>
-                    <option value="large">Large @ Ksh. 600</option>
-                </select>
+        <form action="">
+            <label for="select">Select Size</label>
+            <select class="" id="size">
+              <option selected value="0">Select size here</option>
+              <option value="large">Large</option>
+              <option value="medium">Medium</option>
+              <option value="small">Small</option>
+            </select><br>
+            <label for="crust">Choose Crust!</label>
+              <select class="" id="crust">
+                  <option selected value="0">Select  crust!</option>
+                <option value="Crispy">Crispy</option>
+                <option value="Stuffed">Stuffed</option>
+                <option value="Gluten-free">Gluten-free</option>
+              </select><br>
+            <label for="Toppings">Select Your Toppings</label><br>
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
+                <label class="custom-control-label" for="Sausage">Sausage</label>
+              </div>
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="Green-Pepper" value="Green-Pepper" name="toppings">
+                <label class="custom-control-label" for="Green-Pepper">Green-Pepper</label>
+              </div>
+              <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
+                <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
+              </div>
+              <br><br>
+            <button type="submit" class="btn btn-success proceed">Add to cart</button>
+          </form>
+          <div class="choise">
+              <h2>Your Order is:</h2>
+              <div id="your-orders">
+                <table class="table table-sm  pizzatable">
+                  <thead>
+                    <tr>
+                      <th scope="col">Size</th>
+                      <th scope="col">Crust</th>
+                      <th scope="col">Topping</th>
+                      <th scope="col">Total</th>
+                    </tr>
+                  </thead>
+                  <tbody id="ordersmade">
+                    <tr>
+                      <td id="pizzasize"></td>
+                      <td id="pizzacrust"></td>
+                      <td id="pizzatopping"></td>
+                      <td id="totals"></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p id="pizzatotal"></p>
+                <p id="totalbill"></p>
+                <p id="addedprice">Delivery will cost sh. 150</p>
+                <p id="finallmessage"></p>
+              </div>
+              <button class="btn btn-warning addPizza">Add More Pizza</button>
+              <button class="btn btn-success" id="checkout">Checkout</button>
+              <button class="btn btn-primary deliver">Need delivery?</button>
             </div>
-            <br><br>
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="images/crusty.jpeg" width="100px" height="100px" alt="">
-                </div>
-                <br><br>
-                <label>
-                    <h3>Crusts</h3>
-                </label>
-                <br><br>
-                <select name="typ" id="tpy">
-                    <option value="green pepper">Green Pepper @ Ksh. 50</option>
-                    <option value="mushroom">Mushroom @ Ksh. 100</option>
-                    <option value="sausage">Sausage @ Ksh. 150</option>
-                </select>
-            </div>
-            <br><br>
-            <div class="row">
-                <div class="col-md-4" style="align-items: center;">
-                    <img src="images/toppings.jpg" width="100px" height="100px" alt="">
-                </div>
-                <label>
-                    <br><br>
-                    <h3>Toppings</h3>
-                </label>
-                <select name="typ1" id="tpy1">
-                    <option value="thin crust">Thin Crust @ Ksh.120</option>
-                    <option value="stuffed-cheese">Stuffed-cheese @ Ksh.140</option>
-                    <option value="flatbread">Flatbread @ Ksh. 160</option>
-                </select>
-            </div>
-            <br><br>
-            <label for="number">Number of Pizza's</label>
-            <input type="number" class="form-control" id="number" value="1" placeholder="Number of pizzas" min="1"
-                needed>
-            <br><br>
-            <button class="row"> Total Cash</button>
-            <br><br>
-        </form>
-        <form id="address">
-            <h4>We do free deliveries</h4>
-            <p>Place your order now</p>
-            <div class="form-group">
-                <label for="name">Fullname</label>
-                <input type="text" class="form-control" id="Fullname" placeholder="Fullname">
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control" id="Email" placeholder="Email"> 
-                </div>
-                <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="text" class="form-control city" id="City" placeholder="city">
-                </div>
-                <div class="form-group">
-                    <label for="estate">Estate</label>
-                    <input type="text" class="form-control estate" id="Estate" placeholder="Estate">
-                </div>
-                <br><br>
-                <button type="submit" class="btn btn-warning">submit</button>
-            </div>
-        </form>
-    </div>
+          <form id="address" class="delivery">
+              <h4>We do deliveries</h4>
+              <p>Place your order now</p>
+              <div class="form-group">
+                  <label for="name">Fullname</label>
+                  <input type="text" class="form-control" id="fullname" placeholder="Fullname">
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="text" class="form-control" id="email" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                      <label for="city">City</label>
+                      <input type="text" class="form-control city" id="city" placeholder="city">
+                  </div>
+                  <div class="form-group">
+                      <label for="estate">Estate</label>
+                      <input type="text" class="form-control estate" id="estate" placeholder="Estate">
+                  </div>
+                  <br><br>
+                  <button class="btn btn-orange" id="final-order">Place Order</button>
+              </div>
+          </form>
+        
+       
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="js/scripts.js"></script>
