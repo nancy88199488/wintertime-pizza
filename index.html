@@ -21,91 +21,92 @@
         <form action="">
             <label for="select">Select Size</label>
             <select class="" id="size">
-              <option selected value="0">Select size here</option>
-              <option value="large">Large</option>
-              <option value="medium">Medium</option>
-              <option value="small">Small</option>
+                <option selected value="0">Select size here</option>
+                <option value="large">Large</option>
+                <option value="medium">Medium</option>
+                <option value="small">Small</option>
             </select><br>
             <label for="crust">Choose Crust!</label>
-              <select class="" id="crust">
-                  <option selected value="0">Select  crust!</option>
+            <select class="" id="crust">
+                <option selected value="0">Select crust!</option>
                 <option value="Crispy">Crispy</option>
                 <option value="Stuffed">Stuffed</option>
                 <option value="Gluten-free">Gluten-free</option>
-              </select><br>
+            </select><br>
             <label for="Toppings">Select Your Toppings</label><br>
-              <div class="custom-control custom-checkbox custom-control-inline">
+            <div class="custom-control custom-checkbox custom-control-inline">
                 <input type="checkbox" class="custom-control-input" id="Sausage" value="Sausage" name="toppings">
                 <label class="custom-control-label" for="Sausage">Sausage</label>
-              </div>
-              <div class="custom-control custom-checkbox custom-control-inline">
-                <input type="checkbox" class="custom-control-input" id="Green-Pepper" value="Green-Pepper" name="toppings">
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
+                <input type="checkbox" class="custom-control-input" id="Green-Pepper" value="Green-Pepper"
+                    name="toppings">
                 <label class="custom-control-label" for="Green-Pepper">Green-Pepper</label>
-              </div>
-              <div class="custom-control custom-checkbox custom-control-inline">
+            </div>
+            <div class="custom-control custom-checkbox custom-control-inline">
                 <input type="checkbox" class="custom-control-input" id="Mushrooms" value="Mushrooms" name="toppings">
                 <label class="custom-control-label" for="Mushrooms">Mushrooms</label>
-              </div>
-              <br><br>
+            </div>
+            <br><br>
             <button type="submit" class="btn btn-success proceed">Add to cart</button>
-          </form>
-          <div class="choise">
-              <h2>Your Order is:</h2>
-              <div id="your-orders">
+        </form>
+        <div class="choise">
+            <h2>Your Order is:</h2>
+            <div id="your-orders">
                 <table class="table table-sm  pizzatable">
-                  <thead>
-                    <tr>
-                      <th scope="col">Size</th>
-                      <th scope="col">Crust</th>
-                      <th scope="col">Topping</th>
-                      <th scope="col">Total</th>
-                    </tr>
-                  </thead>
-                  <tbody id="ordersmade">
-                    <tr>
-                      <td id="pizzasize"></td>
-                      <td id="pizzacrust"></td>
-                      <td id="pizzatopping"></td>
-                      <td id="totals"></td>
-                    </tr>
-                  </tbody>
+                    <thead>
+                        <tr>
+                            <th scope="col">Size</th>
+                            <th scope="col">Crust</th>
+                            <th scope="col">Topping</th>
+                            <th scope="col">Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ordersmade">
+                        <tr>
+                            <td id="pizzasize"></td>
+                            <td id="pizzacrust"></td>
+                            <td id="pizzatopping"></td>
+                            <td id="totals"></td>
+                        </tr>
+                    </tbody>
                 </table>
                 <p id="pizzatotal"></p>
                 <p id="totalbill"></p>
                 <p id="addedprice">Delivery will cost sh. 150</p>
                 <p id="finallmessage"></p>
-              </div>
-              <button class="btn btn-warning addPizza">Add More Pizza</button>
-              <button class="btn btn-success" id="checkout">Checkout</button>
-              <button class="btn btn-primary deliver">Need delivery?</button>
             </div>
-          <form id="address" class="delivery">
-              <h4>We do deliveries</h4>
-              <p>Place your order now</p>
-              <div class="form-group">
-                  <label for="name">Fullname</label>
-                  <input type="text" class="form-control" id="fullname" placeholder="Fullname">
-                  <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="text" class="form-control" id="email" placeholder="Email">
-                  </div>
-                  <div class="form-group">
-                      <label for="city">City</label>
-                      <input type="text" class="form-control city" id="city" placeholder="city">
-                  </div>
-                  <div class="form-group">
-                      <label for="estate">Estate</label>
-                      <input type="text" class="form-control estate" id="estate" placeholder="Estate">
-                  </div>
-                  <br><br>
-                  <button class="btn btn-orange" id="final-order">Place Order</button>
-              </div>
-          </form>
-        
-       
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
+            <button class="btn btn-warning addPizza">Add More Pizza</button>
+            <button class="btn btn-success" id="checkout">Checkout</button>
+            <button class="btn btn-primary deliver">Need delivery?</button>
+        </div>
+        <form id="address" class="delivery">
+            <h4>We do deliveries</h4>
+            <p>Place your order now ..</p>
+            <div class="form-group">
+                <label for="name">Fullname</label>
+                <input type="text" class="form-control" id="fullname" placeholder="Fullname">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control city" id="city" placeholder="city">
+                </div>
+                <div class="form-group">
+                    <label for="estate">Estate</label>
+                    <input type="text" class="form-control estate" id="estate" placeholder="Estate">
+                </div>
+                <br><br>
+                <button class="btn btn-orange" id="final-order">Place Order</button>
+            </div>
+        </form>
+
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
 </body>
 
 </html>
