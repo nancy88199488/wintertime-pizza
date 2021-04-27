@@ -22,13 +22,17 @@
     h1, p {
         text-align: center;
         justify-content: center;
-        padding-top: 10px;
+        padding-top: 10px
     }
     
-   
-    
-    
-    
+    input[type=text],
+    input[type=email] {
+      width: 100%;
+      margin-bottom: 10px;
+      color: white;
+      background-color: transparent;
+      border: 1px solid white;
+    }
     
     
     
